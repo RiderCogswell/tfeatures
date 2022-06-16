@@ -20,6 +20,8 @@ const logger = (message: string): void => {
 }
 
 // we only use never when we really never expect anything back
-const throwError = (message: string): never => {
-  throw new Error(message)
+const throwError = (message: string): void => {
+  if (!message) {
+    throw new Error(message)
+  }
 }
