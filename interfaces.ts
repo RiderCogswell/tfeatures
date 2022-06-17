@@ -1,15 +1,20 @@
 // reusable name
+// can take complex properties, and can take functions as properties
 interface Vehicle {
   name: string;
-  year: number;
+  year: Date;
   broken: boolean;
+  summary(): string
 }
 
 // must have same property names as interface
 const oldCivic = {
   name: 'civic',
-  year: 2004,
-  broken: true
+  year: new Date(),
+  broken: true,
+  summary(): string {
+    return `Name: ${this.name}`
+  }
 };
 
 const printVehicle = (vehicle: Vehicle): void => {
