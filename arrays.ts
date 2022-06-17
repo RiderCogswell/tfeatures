@@ -9,7 +9,7 @@ const cars = carMakers[0];
 const myCar = carMakers.pop();
 
 // prevent incompatible values
-carMakers.push(adevgjhvd);
+carMakers.push('adevgjhvd');
 
 // help with map/ foreach/ reduce functions
 carMakers.map((cars: string): string => {
