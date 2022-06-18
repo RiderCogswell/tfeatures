@@ -12,6 +12,11 @@ class Vehicle {
 
 // extends allowsthe methods to be passed into the new class through basic inheritance
 class Cars extends Vehicle {
+  constructor(public wheels: number, color: string) {
+    // need super() when making a constructor on a child class
+    super(color);
+  }
+
   private drive(): void {
     console.log('vroom');
   }
@@ -28,7 +33,7 @@ const vehicle = new Vehicle('orange');
 // vehicle.honk()
 console.log(vehicle.color);
 
-
-const carss = new Cars('orange');
+// anytime you call carss it is running through the constructor function in the Vehicle class because it is the parent
+const carss = new Cars(4, 'red');
 // carss.honk()
 carss.startDrivingProcess();
