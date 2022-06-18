@@ -25,6 +25,7 @@ const drinko = {
   }
 }
 
+// made this function more universal by being generic
 const printSummary = (item: Reportable): void => {
   console.log(item.summary);
 };
