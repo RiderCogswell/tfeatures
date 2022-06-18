@@ -1,4 +1,10 @@
 class Vehicle {
+  // // inititalize color either on next line
+  // color: string;
+
+  // public initializes the instance variable of the method
+  constructor(public color: string) {}
+
   protected honk(): void {
     console.log('beep');
   }
@@ -17,9 +23,12 @@ class Cars extends Vehicle {
   }
 }
 
-const vehicle = new Vehicle();
+const vehicle = new Vehicle('orange');
 // wont work because not explicit children
 // vehicle.honk()
+console.log(vehicle.color);
 
-const carss = new Cars();
+
+const carss = new Cars('orange');
 // carss.honk()
+carss.startDrivingProcess();
